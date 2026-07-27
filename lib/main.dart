@@ -11,28 +11,31 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: DirectorioHorizontal(),
+        body: Directoriohorizontal(),
       ),
     );
   }
 }
 
-class DirectorioHorizontal extends StatefulWidget {
-  const DirectorioHorizontal({super.key});
+
+class Directoriohorizontal extends StatefulWidget {
+  const Directoriohorizontal({super.key});
 
   @override
-  State<DirectorioHorizontal> createState() => _DirectorioHorizontalState();
+  State<Directoriohorizontal> createState() => _DirectoriohorizontalState();
 }
 
-class _DirectorioHorizontalState extends State<DirectorioHorizontal> {
+class _DirectoriohorizontalState extends State<Directoriohorizontal> {
+  bool feliz = true;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
         title: Text("Directorio IST"),
-        backgroundColor: Colors.redAccent,
-        foregroundColor: Colors.amber
+        backgroundColor: const Color.fromARGB(255, 82, 249, 255),
+        foregroundColor: Colors.black
        ),
         body: Column(
           children: [
@@ -44,30 +47,30 @@ class _DirectorioHorizontalState extends State<DirectorioHorizontal> {
                   scrollDirection: Axis.horizontal,
                   children: [
                     CircleAvatar(
+                    backgroundImage: AssetImage("image/Carlos.jpeg"),
+                    radius: (60)),
+                
+                    CircleAvatar(
+                    backgroundImage: AssetImage("image/Christian.jpeg"),
+                    radius: (60)),
+                
+                    CircleAvatar(
+                    backgroundImage: AssetImage("image/David.jpeg"),
+                    radius: (60)),
+                
+                    CircleAvatar(
+                    backgroundImage: AssetImage("image/Fabian.jpeg"),
+                    radius: (60)),
+                
+                    CircleAvatar(
+                    backgroundImage: AssetImage("image/Joselyn.jpeg"),
+                    radius: (60)),
+                    CircleAvatar(
                     backgroundImage: AssetImage("image/Mishell.jpeg"),
                     radius: (60)),
                 
                     CircleAvatar(
-                    backgroundImage: AssetImage("image/Mishell.jpeg"),
-                    radius: (60)),
-                
-                    CircleAvatar(
-                    backgroundImage: AssetImage("image/Mishell.jpeg"),
-                    radius: (60)),
-                
-                    CircleAvatar(
-                    backgroundImage: AssetImage("image/Mishell.jpeg"),
-                    radius: (60)),
-                
-                    CircleAvatar(
-                    backgroundImage: AssetImage("image/Mishell.jpeg"),
-                    radius: (60)),
-                    CircleAvatar(
-                    backgroundImage: AssetImage("image/Mishell.jpeg"),
-                    radius: (60)),
-                
-                    CircleAvatar(
-                    backgroundImage: AssetImage("image/Mishell.jpeg"),
+                    backgroundImage: AssetImage("image/Vanessa.jpeg"),
                     radius: (60)),
                     
                   ],
@@ -79,106 +82,119 @@ class _DirectorioHorizontalState extends State<DirectorioHorizontal> {
               child: ListView(
                 padding: EdgeInsets.all(10),
                 children: [
-                  ListTile(
-                    trailing: Icon(Icons.star, color:  Color.fromARGB(255, 185, 194, 211)),
+                  ListTile( 
+                    trailing: IconButton(
+                      onPressed: () {
+                        setState(() {
+                          feliz = !feliz;
+                        });
+                      },
+                      
+                      icon: Icon(feliz
+                      ? Icons.sentiment_satisfied
+                      : Icons.sentiment_dissatisfied, color: Colors.yellow,
+                    size: 40,
+                      ),
+                    ),
+                    
                     leading: Icon(Icons.person, color: Colors.blue),
                     title: Text("Ing. Israel Zurita"),
                     subtitle: Text("Desarrollo de Aplicaciones Web"),
                   ),
                   Divider(),
                   ListTile(
-                    trailing: Icon(Icons.star, color:  Color.fromARGB(255, 185, 194, 211)),
+                    trailing: Icon(Icons.sentiment_satisfied, color:  Color.fromARGB(255, 247, 243, 24)),
                     leading: Icon(Icons.person, color: Colors.blue),
                     title: Text("Ing. Angel Novillo"),
                     subtitle: Text("Desarrollo de Aplicaciones Web"),
                   ),
                   Divider(),
                   ListTile(
-                    trailing: Icon(Icons.star, color:  Color.fromARGB(255, 185, 194, 211)),
+                    trailing: Icon(Icons.sentiment_satisfied, color:  Color.fromARGB(255, 247, 243, 24)),
                     leading: Icon(Icons.person, color: Colors.blue),
                     title: Text("Ing. Cecilia Naula"),
                     subtitle: Text("Desarrollo de Aplicaciones Web"),
                   ),
                   Divider(),
                   ListTile(
-                    trailing: Icon(Icons.star, color:  Color.fromARGB(255, 185, 194, 211)),
+                    trailing: Icon(Icons.sentiment_satisfied, color:  Color.fromARGB(255, 247, 243, 24)),
                     leading: Icon(Icons.person, color: Colors.blue),
                     title: Text("Ing. Cecilia Naula"),
                     subtitle: Text("Desarrollo de Aplicaciones Web"),
                   ),
                   Divider(),
                   ListTile(
-                    trailing: Icon(Icons.star, color:  Color.fromARGB(255, 185, 194, 211)),
+                    trailing: Icon(Icons.sentiment_satisfied, color:  Color.fromARGB(255, 247, 243, 24)),
                     leading: Icon(Icons.person, color: Colors.blue),
                     title: Text("Ing. Cecilia Naula"),
                     subtitle: Text("Desarrollo de Aplicaciones Web"),
                   ),
                   Divider(),
                   ListTile(
-                    trailing: Icon(Icons.star, color:  Color.fromARGB(255, 185, 194, 211)),
+                    trailing: Icon(Icons.sentiment_satisfied, color:  Color.fromARGB(255, 247, 243, 24)),
                     leading: Icon(Icons.person, color: Colors.blue),
                     title: Text("Ing. Cecilia Naula"),
                     subtitle: Text("Desarrollo de Aplicaciones Web"),
                   ),
                   Divider(),
                   ListTile(
-                    trailing: Icon(Icons.star, color:  Color.fromARGB(255, 185, 194, 211)),
+                    trailing: Icon(Icons.sentiment_satisfied, color:  Color.fromARGB(255, 247, 243, 24)),
                     leading: Icon(Icons.person, color: Colors.blue),
                     title: Text("Ing. Cecilia Naula"),
                     subtitle: Text("Desarrollo de Aplicaciones Web"),
                   ),
                   Divider(),
                   ListTile(
-                    trailing: Icon(Icons.star, color:  Color.fromARGB(255, 185, 194, 211)),
+                    trailing: Icon(Icons.sentiment_satisfied, color:  Color.fromARGB(255, 247, 243, 24)),
                     leading: Icon(Icons.person, color: Colors.blue),
                     title: Text("Ing. Cecilia Naula"),
                     subtitle: Text("Desarrollo de Aplicaciones Web"),
                   ),
                   Divider(),
                   ListTile(
-                    trailing: Icon(Icons.star, color:  Color.fromARGB(255, 185, 194, 211)),
+                    trailing: Icon(Icons.sentiment_satisfied, color:  Color.fromARGB(255, 247, 243, 24)),
                     leading: Icon(Icons.person, color: Colors.blue),
                     title: Text("Ing. Cecilia Naula"),
                     subtitle: Text("Desarrollo de Aplicaciones Web"),
                   ),
                   Divider(),
                   ListTile(
-                    trailing: Icon(Icons.star, color:  Color.fromARGB(255, 185, 194, 211)),
+                    trailing: Icon(Icons.sentiment_satisfied, color:  Color.fromARGB(255, 247, 243, 24)),
                     leading: Icon(Icons.person, color: Colors.blue),
                     title: Text("Ing. Cecilia Naula"),
                     subtitle: Text("Desarrollo de Aplicaciones Web"),
                   ),
                   Divider(),
                   ListTile(
-                    trailing: Icon(Icons.star, color:  Color.fromARGB(255, 185, 194, 211)),
+                    trailing: Icon(Icons.sentiment_satisfied, color:  Color.fromARGB(255, 247, 243, 24)),
                     leading: Icon(Icons.person, color: Colors.blue),
                     title: Text("Ing. Cecilia Naula"),
                     subtitle: Text("Desarrollo de Aplicaciones Web"),
                   ),
                   Divider(),
                   ListTile(
-                    trailing: Icon(Icons.star, color:  Color.fromARGB(255, 185, 194, 211)),
+                    trailing: Icon(Icons.sentiment_satisfied, color:  Color.fromARGB(255, 247, 243, 24)),
                     leading: Icon(Icons.person, color: Colors.blue),
                     title: Text("Ing. Cecilia Naula"),
                     subtitle: Text("Desarrollo de Aplicaciones Web"),
                   ),
                   Divider(),
                   ListTile(
-                    trailing: Icon(Icons.star, color:  Color.fromARGB(255, 185, 194, 211)),
+                    trailing: Icon(Icons.sentiment_satisfied, color:  Color.fromARGB(255, 247, 243, 24)),
                     leading: Icon(Icons.person, color: Colors.blue),
                     title: Text("Ing. Cecilia Naula"),
                     subtitle: Text("Desarrollo de Aplicaciones Web"),
                   ),
                   Divider(),
                   ListTile(
-                    trailing: Icon(Icons.star, color:  Color.fromARGB(255, 185, 194, 211)),
+                    trailing: Icon(Icons.sentiment_satisfied, color:  Color.fromARGB(255, 247, 243, 24)),
                     leading: Icon(Icons.person, color: Colors.blue),
                     title: Text("Ing. Cecilia Naula"),
                     subtitle: Text("Desarrollo de Aplicaciones Web"),
                   ),
                   Divider(),
                   ListTile(
-                    trailing: Icon(Icons.star, color:  Color.fromARGB(255, 185, 194, 211)),
+                    trailing: Icon(Icons.sentiment_satisfied, color:  Color.fromARGB(255, 247, 243, 24)),
                     leading: Icon(Icons.person, color: Colors.blue),
                     title: Text("Ing. Cecilia Naula"),
                     subtitle: Text("Desarrollo de Aplicaciones Web"),
